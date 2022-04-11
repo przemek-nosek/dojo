@@ -12,12 +12,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/jokes")
 @RequiredArgsConstructor
+@CrossOrigin(origins = {"http://localhost:4200", "*"})
 public class JokeController {
 
     private final JokeService jokeService;
 
     @GetMapping
-    @CrossOrigin(origins = "http://localhost:4200")
     public ResponseEntity<Joke> getRandomJoke() {
         Joke joke = jokeService.getRandomJoke();
 
