@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/jokes")
 @RequiredArgsConstructor
-@CrossOrigin(origins = {"https://dojo-jokes.herokuapp.com/jokes"})
+@CrossOrigin
 public class JokeController {
 
     private final JokeService jokeService;
